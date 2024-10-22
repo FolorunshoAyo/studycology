@@ -13,10 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$role = Validation::clean($_POST["role"]);
     
     if (!Validation::username($user_name)) {
-    	$em = "Invalid user name";
+    	$em = "Invalid username";
 	    Util::redirect("../login.php", "error", $em);
     }else if(!Validation::password($password)){
-    	$em = "Invalid Password";
+    	$em = "Invalid password";
 	    Util::redirect("../login.php", "error", $em);
     }else {
       
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['student_id'] = $student_data['student_id'];
             $sm = "logged in!";
             $conn = null;
-            Util::redirect("../Student/index.php", "success", $sm);
+            Util::redirect("../student/index.php", "success", $sm);
           }else {
              $em = "Incorrect username or password";
    	       Util::redirect("../login.php", "error", $em);
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['instructor_id'] = $instructor_data['instructor_id'];
             $sm = "logged in!";
             $conn = null;
-            Util::redirect("../Instructor/index.php", "success", $sm);
+            Util::redirect("../instructor/index.php", "success", $sm);
           }else {
              $em = "Incorrect username or password";
              Util::redirect("../login.php", "error", $em);
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['admin_id'] = $admin_data['admin_id'];
             $sm = "logged in!";
             $conn = null;
-            Util::redirect("../Admin/index.php", "success", $sm);
+            Util::redirect("../admin/index.php", "success", $sm);
           }else {
              $em = "Incorrect username or password";
              Util::redirect("../login.php", "error", $em);

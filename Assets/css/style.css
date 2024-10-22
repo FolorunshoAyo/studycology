@@ -15,17 +15,26 @@
 img {
     max-width: 100% !important;
 }
+.wrapper{
+  background-color: #d0e2ff;
+}
+.navbar.bg-dark{
+  background-color: #002c6c !important;
+}
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-nav .nav-link{
+  color: #fff !important;
+}
 .main-footer {
-  margin-top: 100px;
   width: 100%;
-  background: #333;
+  background: #002c6c;
   padding: 15px;
   justify-content: center;
 }
 
 .main-footer h4 {
   text-align: center;
-  color: #aaa;
+  color: #fff;
   font-weight: 200;
   font-size: 16px;
 }

@@ -1,16 +1,35 @@
 <?php
+session_start();
 include "Utils/Validation.php";
+include "Utils/Util.php";
 include "Config.php";
+
+if(isset($_SESSION['username']) || isset($_SESSION['student_id']) || isset($_SESSION['admin_id']) || isset($_SESSION['instructor_id'])) {
+
+	if(isset($_SESSION['student_id'])){
+		Util::redirectPage("student");
+	}
+	
+	if(isset($_SESSION['admin_id'])){
+		Util::redirectPage("admin");
+	}
+
+	if(isset($_SESSION['instructor_id'])){
+		Util::redirectPage("instructor");
+	}
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login - <?=SITE_NAME?></title>
+	<title>
+		Login - <?= SITE_NAME ?>
+	</title>
 	<link rel="stylesheet" 
 	      type="text/css" 
-	      href="Assets/css/login-signup.css">
+	      href="assets/css/login-signup.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -19,7 +38,7 @@ include "Config.php";
     	<div class="form-holder">
     		<div class="logo">
     			<img src="assets/img/Logo.png">
-    		     <h2>SIGN IN</h2>
+    		    <h4>SIGN IN</h4>
     		</div>
     		<?php 
                 if (isset($_GET['error'])) { ?>
@@ -54,9 +73,8 @@ include "Config.php";
     			<div class="form-group">
     				<button type="submit">Login</button>
     			</div>
-    			<div class="form-group">
-    				<a href="signup.php">Sign Up</a>
-    				<a href="index.php">| Home</a>
+    			<div class="form-group action-links">
+					Don't have an account? <a href="signup.php">Sign Up</a>
     			</div>
     		</form>
     	</div>

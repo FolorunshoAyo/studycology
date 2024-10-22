@@ -1,8 +1,22 @@
 <?php 
 include "Utils/Validation.php";
 
+if(isset($_SESSION['username']) || isset($_SESSION['student_id']) || isset($_SESSION['admin_id']) || isset($_SESSION['instructor_id'])) {
 
-$fname = $uname = $email =$bd = $lname ="";
+	if(isset($_SESSION['student_id'])){
+		Util::redirectPage("student");
+	}
+	
+	if(isset($_SESSION['admin_id'])){
+		Util::redirectPage("admin");
+	}
+
+	if(isset($_SESSION['instructor_id'])){
+		Util::redirectPage("instructor");
+	}
+}
+
+$fname = $uname = $email = $lname = "";
 if (isset($_GET["fname"])) {
 	$fname = Validation::clean($_GET["fname"]);
 }
@@ -12,13 +26,14 @@ if (isset($_GET["uname"])) {
 if (isset($_GET["email"])) {
 	$email = Validation::clean($_GET["email"]);
 }
-if (isset($_GET["bd"])) {
-	$bd = Validation::clean($_GET["bd"]);
-}
+// if (isset($_GET["bd"])) {
+// 	$bd = Validation::clean($_GET["bd"]);
+// }
 if (isset($_GET["lname"])) {
 	$lname = Validation::clean($_GET["lname"]);
 }
- ?>
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,13 +42,16 @@ if (isset($_GET["lname"])) {
 	<title>Sign Up</title>
 	<link rel="stylesheet" 
 	      type="text/css" 
-	      href="Assets/css/login-signup.css">
+	      href="assets/css/login-signup.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="wrapper">
     	<div class="form-holder">
-    		<h2>Create New Account</h2>
+			<div class="logo">
+    			<img src="assets/img/Logo.png">
+    		    <h4>Sign Up</h4>
+    		</div>
     		<?php 
                 if (isset($_GET['error'])) { ?>
                 	<p class="error"><?=Validation::clean($_GET['error'])?></p>
@@ -46,42 +64,45 @@ if (isset($_GET["lname"])) {
     		<form class="form"
     		      action="Action/signup.php" 
     		      method="POST">
-    			<div class="form-group">
-    				<label>First Name</label>
-    				<input type="text" 
-    				       name="fname"
-    				       placeholder="First name"
-    				       value="<?=$fname?>">
-    			</div>
-    			<div class="form-group">
-    				<label>Last Name</label>
-    				<input type="text" 
-    				       name="lname"
-    				       placeholder="Last name"
-    				       value="<?=$lname?>">
-    			</div>
-    			<div class="form-group">
-    				<label>Email</label>
-    				<input type="text" 
-    				       name="email"
-    				       placeholder="Email"
-    				       value="<?=$email?>">
-    			</div>
-    			<div class="form-group">
+				<div class="form-group inline-form-group">
+					<div class="form-group">
+						<label>First Name</label>
+						<input type="text" 
+							name="fname"
+							placeholder="First name"
+							value="<?=$fname?>">
+					</div>
+					<div class="form-group">
+						<label>Last Name</label>
+						<input type="text" 
+							name="lname"
+							placeholder="Last name"
+							value="<?=$lname?>">
+					</div>
+				</div>
+				<div class="form-group inline-form-group">
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text" 
+							name="username"
+							placeholder="User name"
+							value="<?=$uname?>">
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="text" 
+							name="email"
+							placeholder="Email"
+    				       	value="<?=$email?>">
+    				</div>
+				</div>
+    			<!-- <div class="form-group">
     				<label>Birth Day</label>
     				<input type="date" 
     				       name="date_of_birth"
     				       placeholder="Date of birth"
     				       value="<?=$bd?>">
-    			</div>
-    			<div class="form-group">
-    				<label>Username</label>
-    				<input type="text" 
-    				       name="username"
-    				       placeholder="User name"
-    				       value="<?=$uname?>">
-    			</div>
-
+    			</div> -->
     			<div class="form-group">
     				<label>New Password</label>
     				<input type="password" 
@@ -97,9 +118,9 @@ if (isset($_GET["lname"])) {
     			<div class="form-group">
     				<button type="submit">Sign Up</button>
     			</div>
-    			<div class="form-group">
-    				<a href="login.php">Sign In</a>
-    				<a href="index.php">| Home</a>
+    			<div class="form-group action-links">
+    				Have an account? <a href="login.php">Sign In</a>
+    				<!-- <a href="index.php">| Home</a> -->
     			</div>
     		</form>
     	</div>

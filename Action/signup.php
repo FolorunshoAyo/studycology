@@ -12,11 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
    $first_name = Validation::clean($_POST["fname"]);
    $last_name  = Validation::clean($_POST["lname"]);
    $email      = Validation::clean($_POST["email"]);
-   $date_of_birth = Validation::clean($_POST["date_of_birth"]);
+   $date_of_birth = Validation::clean($_POST["date_of_birth"]) ?? "";
    $password      = Validation::clean($_POST["password"]);
 	$re_password   = Validation::clean($_POST["re_password"]);
     
-    $data = "fname=".$first_name."&uname=".$username."&email=".$email."&bd=".$date_of_birth."&lname=".$last_name;
+    $data = "fname=".$first_name."&uname=".$username."&email=".$email."&lname=".$last_name;
 
     if (!Validation::name($first_name)) {
     	$em = "Invalid first name";

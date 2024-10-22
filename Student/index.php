@@ -1,20 +1,29 @@
 <?php 
-// session_start();
+session_start();
 include "../Utils/Util.php";
-// if (isset($_SESSION['user_name']) &&
-//     isset($_SESSION['student_id'])) {
 
-// 	 include "../Controller/Student.php";
-//     $student_obj->init($_SESSION['student_id']);
-//     $student = $student_obj->getStudent();
+if (isset($_SESSION['username']) &&
+    isset($_SESSION['student_id'])) {
+    include "../Controller/Student/Student.php";
+    $_id =  $_SESSION['student_id'];
+    $student = getById($_id);
 
-Util::redirect("Courses.php", "", "");
+    // Util::redirect("Courses.php", "", "");
+
+    $title = "EduPulse - Students ";
+    include "inc/Header.php";
+    include "inc/NavBar.php";
  ?>
-
-
-
+<div class="wrapper">
+    <section class="container">
+        <!-- NavBar -->
+    </section>
+</div>
+<!-- Footer -->
+<?php include "inc/Footer.php"; ?>
 <?php
-//  }else { 
-// $em = "First login ";
-// Util::redirect("login.php", "error", $em);
-// } ?>
+ }else { 
+$em = "You need to login to access your dashboard";
+Util::redirect("../login.php", "error", $em);
+} 
+?>

@@ -6,5 +6,10 @@ class Util{
 	    exit;
 	}
 
+	static function redirectPage($location){
+	    header("Location: $location");
+	    exit;
+	}
+
 
 }

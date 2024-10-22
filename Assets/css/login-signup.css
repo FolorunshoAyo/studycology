@@ -13,6 +13,7 @@
 	box-sizing: border-box;
 }
 .wrapper {
+	background-color: #d0e2ff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -21,43 +22,69 @@
 .form-holder {
 	width: 550px;
 	max-width: 90%;
-	padding: 10px 0px;
-	border-radius: 10px;
-	border: 2px solid #aaa;
+	overflow: hidden;
+	border-radius: 12px;
+	background-color: #fff;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 .form-holder h2 {
 	padding: 10px;
+	background-color: #002c6c;
+	padding: 20px;
+	color: #fff;
 	text-align: center;
 	font-size: 22px;
 }
 .form-holder .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: #002c6c;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
 	text-align: center;
 }
 .form-holder .logo img{
-	width: 100px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 .form-holder h4 {
 	padding: 0 10px;
 	font-size: 18px;
 }
+.form .inline-form-group{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+}
 .form .form-group {
 	width: 90%;
 	margin: 5px auto;
+}
+.form .inline-form-group .form-group{
+	width: calc((100% / 2) - 5px);
 }
 .form-group input{
 	width: 100%;
 	padding: 10px;
 	outline: none;
-	border: 2px solid #ddd;
-	font-size: 15px;
-	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	border-radius: 8px;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #002c6c;
 }
 .form-group label {
 	display: inline-block;
 	padding-top: 10px;
 	padding-bottom: 3px;
 }
-
 .form-group select{
 	width: 50%;
 	padding: 7px;
@@ -67,18 +94,20 @@
 	border-radius: 5px;
 }
 .form-group button{
-	background: #006cff;
+	background: #002c6c;
 	width: 100%;
-	padding: 10px;
+	padding: 12px;
 	outline: none;
 	border: none;
 	font-size: 15px;
-	border-radius: 5px;
+	border-radius: 8px;
 	color: #fff;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 .form-group button:hover{
 	opacity: 0.8;
+	background-color: #00418a;
 }
 .form-group a{
 	color: #555;
@@ -89,19 +118,26 @@
 	color: #222;
 	text-decoration: underline;
 }
+.form-group.action-links{
+	margin-block: 10px;
+	text-align: center;
+}
+.form-group.action-links a{
+	text-decoration: underline;
+}
 .error {
 	background: #ffc9c5;
 	padding: 10px;
 	width: 90%;
-	margin: 2px auto;
+	margin: 10px auto 0;
 	color: red;
 	border-radius: 5px;
 }
 .success {
 	background: #B7FFB7;
+	margin: 10px auto 0;
 	padding: 10px;
 	width: 90%;
-	margin: 2px auto;
 	color: green;
 	border-radius: 5px;
 }
