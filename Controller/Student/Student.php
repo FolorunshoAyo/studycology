@@ -1,9 +1,9 @@
 <?php 
-include "../Models/Student.php";
-include "../Models/Certificate.php";
-include "../Models/Course.php";
+include "../models/student.php";
+include "../models/certificate.php";
+include "../models/course.php";
 
-include "../Database.php";
+include "../database.php";
 
 
 function getSomeStudent($offset, $num){

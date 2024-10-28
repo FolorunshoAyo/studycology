@@ -1,8 +1,8 @@
 <?php
 session_start();
-include "Utils/Validation.php";
-include "Utils/Util.php";
-include "Config.php";
+include "utils/validation.php";
+include "utils/util.php";
+include "config.php";
 
 if(isset($_SESSION['username']) || isset($_SESSION['student_id']) || isset($_SESSION['admin_id']) || isset($_SESSION['instructor_id'])) {
 
@@ -52,7 +52,7 @@ if(isset($_SESSION['username']) || isset($_SESSION['student_id']) || isset($_SES
     				<label>Username</label>
     				<input type="text" 
     				       name="username"
-    				       placeholder="User name"
+    				       placeholder="Username"
     				       value="">
     			</div>
     			<div class="form-group">

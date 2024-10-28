@@ -1,11 +1,11 @@
 <?php  
 session_start();
-include "../Utils/Validation.php";
-include "../Utils/Util.php";
-include "../Database.php";
-include "../Models/Student.php";
-include "../Models/Admin.php";
-include "../Models/Instructor.php";
+include "../utils/validation.php";
+include "../utils/util.php";
+include "../database.php";
+include "../models/student.php";
+include "../models/admin.php";
+include "../models/instructor.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$user_name = Validation::clean($_POST["username"]);

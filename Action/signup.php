@@ -1,20 +1,17 @@
 <?php  
-include "../Utils/Validation.php";
-include "../Utils/Util.php";
-include "../Database.php";
-include "../Models/Student.php";
+include "../utils/validation.php";
+include "../utils/util.php";
+include "../database.php";
+include "../models/student.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
-	
-
    $username   = Validation::clean($_POST["username"]);
    $first_name = Validation::clean($_POST["fname"]);
    $last_name  = Validation::clean($_POST["lname"]);
    $email      = Validation::clean($_POST["email"]);
    $date_of_birth = Validation::clean($_POST["date_of_birth"]) ?? "";
    $password      = Validation::clean($_POST["password"]);
-	$re_password   = Validation::clean($_POST["re_password"]);
+   $re_password   = Validation::clean($_POST["re_password"]);
     
     $data = "fname=".$first_name."&uname=".$username."&email=".$email."&lname=".$last_name;
 

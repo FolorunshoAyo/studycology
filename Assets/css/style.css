@@ -6,6 +6,10 @@
   font-family: PoppinsBlack;
   src: url(../fonts/Poppins-Black.ttf);
 }
+:root{
+  --bs-primary: #002c6c;
+  --bs-secondary: #d0e2ff;
+}
 *{
 	padding: 0;
 	margin: 0;
@@ -21,10 +25,6 @@ img {
 .navbar.bg-dark{
   background-color: #002c6c !important;
 }
-.navbar-dark .navbar-toggler,
-.navbar-dark .navbar-nav .nav-link{
-  color: #fff !important;
-}
 .main-footer {
   width: 100%;
   background: #002c6c;
@@ -39,7 +39,7 @@ img {
   font-size: 16px;
 }
 .container {
-	min-height: 90vh;
+	/* min-height: 90vh; */
 }
 .side-by-side {
    display: flex;
@@ -188,4 +188,48 @@ img {
 
 .circle {
     border-radius: 50%;
+}
+/* Custom Classes */
+.border-none{
+  border: none;
+}
+
+.news-image{
+  flex: 0 0 100px;
+  height: 100px;
+}
+
+.carousel{
+  max-width: 800px;
+}
+
+.home-card{
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s ease-in;
+}
+
+.home-card:hover{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.news-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width:576px)  {
+  .header-pill{
+    font-size: 1rem !important;
+  } 
+
+  .home-card p{
+    font-size: 0.9rem;
+  } 
+}
+
+@media (max-width:350px)  {
+  .home-card p{
+    font-size: 0.7rem;
+  } 
 }
