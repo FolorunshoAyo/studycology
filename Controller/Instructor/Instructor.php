@@ -1,8 +1,8 @@
 <?php 
-include "../models/instructor.php";
+include "../Models/Instructor.php";
 //include "../Models/Course.php";
 
-include "../database.php";
+include "../Database.php";
 
 
 

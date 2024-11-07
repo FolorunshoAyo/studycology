@@ -11,5 +11,9 @@ class Util{
 	    exit;
 	}
 
-
+	static function isActive($fileName) {
+        $currentFile = basename($_SERVER['SCRIPT_NAME'], '.php');
+        
+        return $currentFile === $fileName ? true : false;
+    }
 }

@@ -1,4 +1,3 @@
-<br>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">
@@ -11,24 +10,24 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item position-relative">
-          <a class="nav-link active" href="Courses.php"> <i class="fa fa-home"></i> Dashboard </a>
+          <a class="nav-link <?= Util::isActive("index")? "active" : "" ?>" href="./"> <i class="fa fa-home"></i> Dashboard </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle <?= Util::isActive("cbt-add") ||  Util::isActive("cbt-view")? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             CBT
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Add CBT Test Question</a></li>
-            <li><a class="dropdown-item" href="#">View CBT questions</a></li>
+            <li><a class="dropdown-item" href="./cbt-add.php">Add CBT Test Question</a></li>
+            <li><a class="dropdown-item" href="./cbt-view.php">View CBT Questions</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle <?= Util::isActive("all-assignment-view") ||  Util::isActive("assignment-add") ||  Util::isActive("assignment-edit") || Util::isActive("assignment-submissions") || Util::isActive("assignment-view")? "active" : "" ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Assignment
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Add new Assignment</a></li>
-            <li><a class="dropdown-item" href="#">View all assignments</a></li>
+            <li><a class="dropdown-item" href="./assignment-add.php">Add New Assignment</a></li>
+            <li><a class="dropdown-item" href="./all-assignment-view.php">View all Assignments</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -36,8 +35,8 @@
             Exam
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Add new Exam</a></li>
-            <li><a class="dropdown-item" href="#">View all</a></li>
+            <li><a class="dropdown-item" href="#">Add New Exam</a></li>
+            <li><a class="dropdown-item" href="#">View all Exams</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
