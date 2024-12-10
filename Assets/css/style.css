@@ -89,14 +89,14 @@ img {
   }
 }
 .certificate {
-    width: 100%;
-    max-width: 1000px;
-    height: 600px;
-    margin: 10px auto;
-    border: 20px double #3498db;
-    position: relative;
-    text-align: center;
-    background-color: #fff;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 10px auto;
+  border: 20px double #3498db;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
 }
 
 .certificate .header {

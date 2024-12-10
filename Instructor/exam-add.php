@@ -10,20 +10,20 @@ if (
     $_id =  $_SESSION['instructor_id'];
     $instructor = getById($_id);
 
-    $title = "Studycology - Instructors (Create a new assignment)";
+    $title = "Studycology - Instructors (Create a new Exam)";
     include "inc/header.php";
     include "inc/navbar.php";
 ?>  
     <div class="container my-4">
-        <form action="action/add-assignment.php" class="border p-3 p-sm-5">
-            <h4>Create Assignment</h4>
+        <form action="action/add-exam.php" class="border p-3 p-sm-5">
+            <h4>Create Exam</h4>
             <div class="mb-3">
-                <label for="assignmentName" class="form-label">Assignment Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" placeholder="e.g Mathematics Assignment: Algebra and Functions" id="assignmentName" required>
+                <label for="examName" class="form-label">Exam Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" placeholder="e.g Mathematics Exam: Algebra and Functions" id="examName" required>
             </div>
             <div class="mb-3">
-                <label for="assignmentDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="assignmentDescription" placeholder="Enter Description here" rows="3"></textarea>
+                <label for="examDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="examDescription" placeholder="Enter Description here" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="subjectSelect" class="form-label">Subject <span class="text-danger">*</span></label>
@@ -39,11 +39,7 @@ if (
                 <label for="totalScore" class="form-label">Total Score <span class="text-danger">*</span></label>
                 <input type="number" class="form-control" placeholder="e.g 10 or 50 or 100 " id="totalScore" required>
             </div>
-            <div class="mb-3">
-                <label for="dueDate" class="form-label">Due Date <span class="text-danger">*</span></label>
-                <input type="datetime-local" class="form-control" id="dueDate" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Create Assignment</button>
+            <button type="submit" class="btn btn-primary">Create Exam</button>
         </form>
     </div>
     <!-- Footer -->

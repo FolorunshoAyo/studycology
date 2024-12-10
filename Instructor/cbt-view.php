@@ -76,7 +76,7 @@ if (
                         <td><b>C</b></td>
                         <td><span class="badge bg-danger">inactive</span></td>
                         <td>
-                            <a href="javascript:void()" class="btn btn-primary">
+                            <a href="cbt-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
                         </td>
@@ -97,7 +97,7 @@ if (
                         <td><b>C</b></td>
                         <td><span class="badge bg-danger">inactive</span></td>
                         <td>
-                            <a href="javascript:void()" class="btn btn-primary">
+                            <a href="cbt-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
                         </td>
@@ -118,7 +118,7 @@ if (
                         <td><b>C</b></td>
                         <td><span class="badge bg-danger">inactive</span></td>
                         <td>
-                            <a href="javascript:void()" class="btn btn-primary">
+                            <a href="cbt-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
                         </td>

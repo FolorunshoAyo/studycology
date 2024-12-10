@@ -17,7 +17,7 @@ if (
     <div class="container mt-4">
         <div class="list-table pt-5">
             <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
-                <h4 class="mb-0">All added Assignments</h4>
+                <h4 class="mb-0">All added Exams</h4>
                 <form action="./cbt-view.php" class="row gx-1 gy-2 align-items-center mt-2 mt-sm-0">
                     <div class="col-2">
                         <span>Filter By:</span>
@@ -52,11 +52,11 @@ if (
                     <tr>
                         <td>1</td>
                         <td>
-                            Assignment on Linear algebra <span class="badge bg-success">Published</span><br>
+                            Exam on Linear algebra <span class="badge bg-success">Published</span><br>
                             <span class="badge bg-primary">Objective</span>
                             <span class="badge bg-primary">Theory</span>
                         </td>
-                        <td>An assignment to test your skills in linear algebra</td>
+                        <td>An Exam to test your skills in linear algebra</td>
                         <td>Mathematics</td>
                         <td>
                             <b>Objective:</b> <span class="text-success">50</span> marks<br>
@@ -65,13 +65,13 @@ if (
                         </td>
                         <td>10th, September, 2024 12:30pm</td>
                         <td>
-                            <!-- <a href="assignment-edit.php" class="btn btn-primary">
+                            <!-- <a href="Exam-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="assignment-edit-questions.php" class="btn btn-secondary">
+                            <a href="Exam-edit-questions.php" class="btn btn-secondary">
                                 <i class="fa fa-question-circle-o"></i>
                             </a> -->
-                            <a href="assignment-view.php" class="btn btn-success">
+                            <a href="exam-view.php" class="btn btn-success">
                                 <i class="fa fa-eye"></i>
                             </a>
                         </td>
@@ -79,11 +79,11 @@ if (
                     <tr>
                         <td>2</td>
                         <td>
-                            Assignment on Linear algebra <span class="badge bg-danger">Unpublished</span><br>
+                            Exam on Linear algebra <span class="badge bg-danger">Unpublished</span><br>
                             <span class="badge bg-primary">Objective</span>
                             <span class="badge bg-primary">Theory</span>
                         </td>
-                        <td>An assignment to test your skills in linear algebra</td>
+                        <td>An Exam to test your skills in linear algebra</td>
                         <td>Mathematics</td>
                         <td>
                             <b>Objective:</b> <span class="text-success">50</span> marks<br>
@@ -92,13 +92,13 @@ if (
                         </td>
                         <td>10th, September, 2024 12:30pm</td>
                         <td>
-                            <!-- <a href="assignment-edit.php" class="btn btn-primary">
+                            <!-- <a href="Exam-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="assignment-edit-questions.php" class="btn btn-secondary">
+                            <a href="Exam-edit-questions.php" class="btn btn-secondary">
                                 <i class="fa fa-question-circle-o"></i>
                             </a> -->
-                            <a href="assignment-view.php" class="btn btn-success">
+                            <a href="exam-view.php" class="btn btn-success">
                                 <i class="fa fa-eye"></i>
                             </a>
                         </td>
@@ -106,11 +106,11 @@ if (
                     <tr>
                         <td>3</td>
                         <td>
-                            Assignment on Linear algebra <span class="badge bg-danger">Unpublished</span><br>
+                            Exam on Linear algebra <span class="badge bg-danger">Unpublished</span><br>
                             <span class="badge bg-primary">Objective</span>
                             <span class="badge bg-primary">Theory</span>
                         </td>
-                        <td>An assignment to test your skills in linear algebra</td>
+                        <td>An Exam to test your skills in linear algebra</td>
                         <td>Mathematics</td>
                         <td>
                             <b>Objective:</b> <span class="text-success">50</span> marks<br>
@@ -119,13 +119,13 @@ if (
                         </td>
                         <td>10th, September, 2024 12:30pm</td>
                         <td>
-                            <!-- <a href="assignment-edit.php" class="btn btn-primary">
+                            <!-- <a href="Exam-edit.php" class="btn btn-primary">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="assignment-edit-questions.php" class="btn btn-secondary">
+                            <a href="Exam-edit-questions.php" class="btn btn-secondary">
                                 <i class="fa fa-question-circle-o"></i>
                             </a> -->
-                            <a href="assignment-view.php" class="btn btn-success">
+                            <a href="exam-view.php" class="btn btn-success">
                                 <i class="fa fa-eye"></i>
                             </a>
                         </td>
@@ -134,13 +134,13 @@ if (
             </div>
         </div>
         <div class="empty-table pt-5 mb-5">
-            <h4>All Assignments</h4>
+            <h4>All Exams</h4>
 
             <div class="border rounded d-flex align-items-center justify-content-center p-5">
                 <div class="empty-container d-flex flex-column text-center">
                     <i class="fa fa-frown-o mb-2 fs-1"></i>
-                    <p class="mb-2">No recent Assignments to display yet.</p>
-                    <a href="#">Create New Assignment</a>
+                    <p class="mb-2">No recent Exams to display yet.</p>
+                    <a href="#">Create New Exam</a>
                 </div>
             </div>
         </div>
